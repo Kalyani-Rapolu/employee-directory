@@ -1,10 +1,10 @@
-document.addEventListener("DOMContentLoaded", function () { 
+document.addEventListener("DOMContentLoaded", function () {
   const params = new URLSearchParams(window.location.search);
   const editId = Number(params.get("editId"));
   const form = document.getElementById("employeeForm");
 
   if (editId) {
-    const emp = mockEmployees.find(e => e.id === editId);
+    const emp = mockEmployees.find((e) => e.id === editId);
     if (emp) {
       document.getElementById("employeeId").value = emp.id;
       document.getElementById("firstName").value = emp.firstName;
@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   form.addEventListener("submit", function (e) {
     e.preventDefault();
+
     const id = Number(document.getElementById("employeeId").value);
     const employee = {
       id: id || Date.now(),
@@ -38,13 +39,21 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
-    const existingIndex = mockEmployees.findIndex(emp => emp.id === id);
+    const existingIndex = mockEmployees.findIndex((emp) => emp.id === id);
     if (existingIndex !== -1) {
       mockEmployees[existingIndex] = employee;
     } else {
       mockEmployees.push(employee);
     }
 
-    window.location.href = "index.ftlh";
+    window.location.href = "index.html";
   });
+
+  // Optional: Cancel button handler
+  const cancelBtn = document.getElementById("cancelBtn");
+  if (cancelBtn) {
+    cancelBtn.addEventListener("click", () => {
+      window.location.href = "index.html";
+    });
+  }
 });
