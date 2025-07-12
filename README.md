@@ -21,3 +21,35 @@ Simply open `index.ftlh` in browser (if simulating) or serve via a Freemarker se
 ## Improvements
 - Add real Freemarker backend
 - Improve UI animations and transitions
+# Employee Directory Web Interface
+
+A responsive and interactive employee directory built using **HTML**, **CSS**, **Vanilla JavaScript**, and **Freemarker templates**.
+
+---
+
+## 📁 Project Structure
+
+
+---
+
+## 🚀 How to Run
+
+### 🖥 Option 1: Open in Browser (No backend)
+
+> This project is fully client-side. You can simulate Freemarker by injecting mock data via JavaScript.
+
+1. Clone the repo:
+   ```bash
+   git clone https://github.com/Kalyani-Rapolu/employee-directory.git
+
+---
+
+### ✅ Next Steps
+
+- [ ] Add real screenshots to the `README.md` if possible.
+- [ ] Commit and push it:
+
+```bash
+git add README.md
+git commit -m "Add README with project instructions and reflection"
+git push
